@@ -42,7 +42,7 @@ jobs:
       with:
         crate: forky_cli
     - name: 🔨 Build
-      run: cargo run build
+      run: cargo build
     - name: 🔎 Test Native
       run: cargo run --example sweet
     - name: 🔎 Test Wasm
