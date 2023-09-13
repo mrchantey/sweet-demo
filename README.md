@@ -1,22 +1,24 @@
 # sweet-demo
-Demo for the sweet test framework
+Demo for the sweet test framework.
 
-## Quickstart
+[Documentation here](https://mrchantey.github.io/forky/docs/sweet/index.html)
+
+## Cheatsheet
 
 ```sh
-### NATIVE ###
+# NATIVE
 
 cargo run --example sweet
-# watch
+## watch
 cargo watch -- cargo run --example sweet -- -w
-# e2e
+## e2e (requires chromedriver)
 cargo run --example sweet --features=e2e
 
-### WEB ###
+# WEB (requires forky_cli, wasm-bindgen-cli, chromedriver)
 
 forky sweet --example sweet
-# watch
+## watch
 forky sweet --example sweet -w
-# interactive
+## interactive
 forky sweet --example sweet -w --interactive
 ```
