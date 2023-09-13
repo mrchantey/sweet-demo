@@ -1,0 +1,20 @@
+[package]
+name = "sweet-demo"
+version = "0.1.0"
+edition = "2021"
+
+[[example]]
+name = "sweet"
+path = "test/mod.rs"
+
+[features]
+e2e = ["dep:fantoccini"]
+
+[dev-dependencies]
+sweet = "0.1.*"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+web-sys = "0.3.*"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+fantoccini = { version = "0.19.*", optional = true }
