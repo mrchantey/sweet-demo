@@ -6,9 +6,11 @@ pub use sweet::*;
 mod common;
 
 // include tests that should only run with feature
-#[cfg(feature = "e2e")]
-mod e2e;
+#[cfg(all(not(target_arch = "wasm32"), feature = "e2e"))]
+mod native_e2e;
 
 // include tests that should only run in-browser
 #[cfg(target_arch = "wasm32")]
-mod web;
+mod web_component;
+#[cfg(target_arch = "wasm32")]
+mod web_e2e;
