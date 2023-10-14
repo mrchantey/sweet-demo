@@ -4,7 +4,7 @@ use sweet_demo::add;
 // have a play with some of these and make them fail!
 
 #[sweet_test]
-fn foobar() -> Result<()> {
+fn it_adds() -> Result<()> {
     expect(add(1, 2)).to_be(3)
 }
 
