@@ -11,7 +11,8 @@ path = "test/mod.rs"
 e2e = ["dep:fantoccini"]
 
 [dev-dependencies]
-sweet = "0.1.32"
+sweet = "0.1.36"
+# sweet = { path = "../forky/crates/sweet" }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 web-sys = "0.3.*"
